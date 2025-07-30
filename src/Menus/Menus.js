@@ -9,6 +9,7 @@ const GET_MENUS = gql`
         node {
           title
           slug
+          id
           menuFlex {
             __typename
             ... on MenuFlex {
@@ -50,7 +51,7 @@ const Menus = () => {
                 return (
                 <div key={key}>
                     <h3>
-                        <Link to={`menu/${teMenus.node.slug}`}>{teMenus.node.title}</Link>
+                        <Link to={`/menus/${teMenus.node.slug}`}>{teMenus.node.title}</Link>
                     </h3>
                 </div>
                 )

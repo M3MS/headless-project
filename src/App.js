@@ -17,11 +17,11 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
       <div className="content">
-        <h1>28 Market Place</h1>
+        <h1 className='h1'>28 Market Place</h1>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/menus" element={<Menus />} />
-          <Route path="/menu/:slug" element={<SingleMenu />} />
+          <Route path="/menus/:slug" element={<SingleMenu />} />
         </Routes>
       </div>
       </BrowserRouter>
