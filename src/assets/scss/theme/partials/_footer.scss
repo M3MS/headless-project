@@ -1,0 +1,98 @@
+/*
+*
+* Footer
+*
+*/
+
+.site-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: $green;
+	padding: 10rem 0 9rem;
+
+	.logo {
+		display: block;
+		max-width: 165px;
+		margin: 0 auto 6rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:nth-child(2){
+			@extend .offset-lg-2;
+			@extend .offset-md-1;
+		}
+	}
+
+	.menu-item {
+		padding-bottom: 1rem;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		a {
+			color: $cream;
+			font-size: 2rem;
+		}
+	}
+
+	.socials {
+		display: flex;
+
+		a {
+			margin-right: 4rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		position: relative;
+		padding: 5rem 0 4.5rem;
+		
+		.logo {
+			max-width: 100px;
+			margin-bottom: 4rem;
+		}
+
+		.footer-col {
+			text-align: center;
+
+			.menu-item {
+				padding-bottom: 1rem;
+
+				&:last-child {
+					padding-bottom: 1rem;
+				}
+
+				a {
+					font-size: 1.8rem;
+				}
+			}
+
+			&:last-child {
+				flex-direction: column-reverse;
+			}
+		}
+
+		.socials {
+			justify-content: center;
+			margin: 3rem 0;
+		}
+	}
+
+}

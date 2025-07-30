@@ -1,0 +1,22 @@
+.large-image {
+
+	img {
+		width: 100%;
+	}
+	
+	.caption {
+		font-size: 1.2rem;
+		margin-top: 2rem;
+	}
+
+	@media only screen and (max-width: 767px) {
+
+		img {
+			height: 35vh;
+		}
+
+		.caption {
+			margin-left: 12px;
+		}
+	}
+}

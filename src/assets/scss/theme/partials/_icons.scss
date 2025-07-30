@@ -1,0 +1,59 @@
+/**
+*
+* Icons fonts setup
+*
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../../fonts/icomoon.eot?v2vrdk');
+  src:  url('../../../fonts/icomoon.eot?v2vrdk#iefix') format('embedded-opentype'),
+    url('../../../fonts/icomoon.ttf?v2vrdk') format('truetype'),
+    url('../../../fonts/icomoon.woff?v2vrdk') format('woff'),
+    url('../../../fonts/icomoon.svg?v2vrdk#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  &::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 2rem;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.icon-prev-arrow:before {
+  content: "\e902";
+  color: #00563f;
+}
+.icon-next-arrow:before {
+  content: "\e903";
+  color: #00563f;
+}
+.icon-arrow-right:before {
+  content: "\e901";
+  color: #00563f;
+}
+.icon-fb:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-tw:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-insta:before {
+  content: "\e904";
+  color: #fff;
+}

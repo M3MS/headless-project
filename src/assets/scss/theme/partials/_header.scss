@@ -1,0 +1,226 @@
+//_header.scss
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 999;
+  background-color: $cream;
+  transition: all 1s cubic-bezier(.45,.082,0,.90);
+
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.menu-open {
+    position: fixed !important;
+    transform: none;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 3.5vw;
+  }
+
+  .primary-navigation {
+    width: 100%;
+    height: 100%;
+    transition: all 1s cubic-bezier(.45,.082,0,.90);
+
+    .header-menu{
+      height: 100%;
+    }
+
+    #main-menu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .menu-item {
+        padding-right: 5rem;
+
+        &:last-child() {
+          padding-right: 8rem;
+        }
+
+        &.current-menu-item, &.current-page-ancestor {
+
+          a {
+            &::after {
+              transform: scale3d(1, 1, 1);
+            }
+            
+          }
+        }
+
+        a {
+          display: block;
+          position: relative;
+          font-size: 1.8rem;
+
+          &::after {
+            display: block;
+            content: '';
+            background-color: $green;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            transform: scale3d(0, 1, 1);
+            transform-origin: center left;
+            transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+          }
+
+          &:hover {
+            &::after {
+              transform: scale3d(1, 1, 1);
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &.over-on {
+    .primary-navigation {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  #menu-toggle {
+    display: block;
+    width: 30px;
+    height: 25px;
+    margin: 0;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    #hamburger {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      span {
+          display: block;
+          background: $green;
+          width: 25px;
+          height: 2px;
+          position: relative;
+          top: 0;
+          left: 0;
+          margin: 5px auto;
+          transition: width .25s ease-in-out;
+
+          &:nth-child(1){
+              transition-delay: .5s;
+          }
+          &:nth-child(2){
+              transition-delay: .625s;
+          }
+          &:nth-child(3){
+              transition-delay: .75s;
+          }
+      }
+    }
+    #cross {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: rotate(45deg);
+      transition: .25s ease-in-out;
+
+      span{
+          display: block;
+          background: $green;
+          transition: .25s ease-in-out;
+
+        &:nth-child(1){
+          height: 0%;
+          width: 2px;
+          position: absolute;
+          top: 0.5px;
+          left: 12px;
+          transition-delay: 0s;
+        }
+        &:nth-child(2){
+          width: 0%;
+          height: 2px;
+          position: absolute;
+          left: 0.5px;
+          top: 12px;
+          transition-delay: .25s;
+        }
+      }
+    }
+  }
+
+  #menu-toggle.open {
+      #hamburger {
+          span {
+              width:0%;
+
+              &:nth-child(1){
+                  transition-delay: 0s;
+              }
+              &:nth-child(2){
+                  transition-delay: .125s;
+              }
+              &:nth-child(3){
+                  transition-delay: .25s;
+              }
+          }
+      }
+      #cross {
+          span {
+              &:nth-child(1){
+                  height: 25px;
+                  transition-delay: .625s;
+              }
+          }
+          span {
+              &:nth-child(2){
+                  width: 25px;
+                  transition-delay: .375s;
+              }
+          }
+      }
+  }
+
+    @media only screen and (max-width: 767px) {
+
+        .inner {
+            padding: 0 2rem;
+        }
+
+        .primary-navigation {
+            padding-right: 2.5rem;
+
+            #main-menu {
+                justify-content: flex-start;
+
+                .menu-item {
+                    padding-right: 1.5rem;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    a {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+/* LINKS
+ * ------------------------------------------------ */
+a, a:visited {
+	font-weight: 300;
+	outline: 0;
+	transition: all 0.3s ease-in-out;
+}
+a:hover, a:focus, a:active {
+	cursor: pointer;
+}
+p a, p a:visited { line-height: inherit; }
+
+
+.icon-arrow-right {
+	display: inline-block;
+	position: relative;
+	font-size: 1.8rem;
+	letter-spacing: 1.5px;
+
+	&::before {
+		position: absolute;
+		right: -5rem;
+		top: 0.9rem;
+		font-size: 1rem;
+		transition: all 0.6s ease-in-out;
+	}
+
+	&:hover {
+		cursor: pointer;
+		
+		&::before {
+			right: -6rem;
+		}
+	}
+}
+

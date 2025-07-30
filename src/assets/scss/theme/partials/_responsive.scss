@@ -1,0 +1,56 @@
+// _responsive.scss
+
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		font-size: 1.4rem;
+	}
+
+	p, a, span {
+		font-size: 1.4rem;
+	}
+
+	#cookie-law {
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+
+		p {
+			padding: 0 2rem;
+			margin-bottom: 2rem;
+		}
+
+		a.button {
+			margin-left: 0;
+			font-size: 1.4rem;
+		}
+	}
+
+	.splash {
+		 .logo {
+		 	width: 130px;
+		 }
+	}
+
+	.mb-lg, .mb-md {
+		margin-bottom: 8rem;
+	}
+
+	.mt-lg, .mt-md {
+		margin-top: 8rem;
+	}
+
+	.mt-sm {
+		margin-top: 4rem;
+	}
+
+	.mb-sm {
+		margin-bottom: 4rem;
+	}
+
+	.title {
+		font-size: 1.8rem;
+	}
+
+}

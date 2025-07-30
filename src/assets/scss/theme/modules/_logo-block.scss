@@ -1,0 +1,14 @@
+.logo-block {
+
+	img {
+		display: block;
+		max-width: 320px;
+		margin: 0 auto;
+	}
+
+	@media only screen and (max-width: 767px) {
+		img {
+			max-width: 200px;
+		}
+	}
+}

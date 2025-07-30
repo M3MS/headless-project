@@ -1,0 +1,94 @@
+@import '~bootstrap/scss/functions';
+
+$cream: #F3F4EE;
+$green: #00563f;
+
+$theme-colors: (
+    "cream": $cream,
+    "green": $green,
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+// // scss-docs-start theme-color-variables
+// $primary: $purple;
+// $secondary: $accent;
+// $success: $accent;
+// $info: $peach;
+// $warning: $salmon;
+// $danger: $salmon;
+// $light: $grey-light;
+// $dark: $grey;
+// scss-docs-end theme-color-variables
+
+$accent: $green; 
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $cream;
+$body-color: $green;
+
+@font-face {
+    font-family: 'GTWalsheimPro';
+    src: url('../../fonts/GTWalsheimProRegular.eot');
+    src: url('../../fonts/GTWalsheimProRegular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/GTWalsheimProRegular.woff2') format('woff2'),
+        url('../../fonts/GTWalsheimProRegular.woff') format('woff'),
+        url('../../fonts/GTWalsheimProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro';
+    src: url('../../fonts/GTWalsheimProLight.eot');
+    src: url('../../fonts/GTWalsheimProLight.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/GTWalsheimProLight.woff2') format('woff2'),
+        url('../../fonts/GTWalsheimProLight.woff') format('woff'),
+        url('../../fonts/GTWalsheimProLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+$font: 'GTWalsheimPro', sans-serif;
+$font-family-sans-serif: $font;
+
+$h1-font-size: 64px;
+$h2-font-size: 48px;
+$h3-font-size: 32px;
+$h4-font-size: 24px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+
+$headings-font-weight: normal;
+$headings-line-height: calc(1em + 0.5rem);
+$headings-margin-bottom: 1rem;
+
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+);
+
+$grid-gutter-width: 1.5rem;
+$container-padding-x: $grid-gutter-width;
+
+$border-color: $green;
+$border-radius-lg: 1rem;
+
+$link-color: $green;
+$link-hover-color: $green;
+$link-decoration: none;

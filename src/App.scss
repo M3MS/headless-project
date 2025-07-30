@@ -1,0 +1,41 @@
+@import "assets/scss/core/variables_overrides";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/maps';
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/type";
+
+//  PARTIALS
+@import "assets/scss/theme/partials/icons";
+@import "assets/scss/theme/partials/links";
+@import "assets/scss/theme/partials/buttons";
+@import "assets/scss/theme/partials/forms";
+@import "assets/scss/theme/partials/page";
+@import "assets/scss/theme/partials/footer";
+@import "assets/scss/theme/partials/header";
+@import "assets/scss/theme/partials/overnav";
+
+//  MODULES
+@import "assets/scss/theme/modules/hero-slider";
+@import "assets/scss/theme/modules/large-text";
+@import "assets/scss/theme/modules/two-col-content";
+@import "assets/scss/theme/modules/large-image";
+@import "assets/scss/theme/modules/logo-block";
+@import "assets/scss/theme/modules/modal";
+
+//  VENDOR
+//@import "assets/scss/theme/vendor/slick";
+//@import "assets/scss/theme/vendor/slick-theme";
+
+// TEMPLATES
+@import "assets/scss/theme/templates/404";
+@import "assets/scss/theme/templates/single";
+@import "assets/scss/theme/templates/home";
+@import "assets/scss/theme/templates/menu";
+@import "assets/scss/theme/templates/landing";
+
+@import "assets/scss/theme/partials/responsive";

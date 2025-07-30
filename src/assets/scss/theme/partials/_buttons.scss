@@ -1,0 +1,49 @@
+/* BUTTONS
+ * ------------------------------------------------ */
+a.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: block;
+	background-color: transparent;
+	border: none;
+	border-radius: none;
+	padding: 0;
+	font-size: 1.8rem;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	color: $green;
+	border-radius: 0;
+	margin: 0;
+	transition: all 0.4s ease-in-out;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+
+	&:hover {
+		background-color: $green;
+		color: $cream;
+		cursor: pointer;
+	}
+
+}
+
+button {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+/* Fix for odd Mozilla border & padding issues */
+button,
+input {
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+:focus, textarea:focus {
+  outline: none;
+  border: none;
+}

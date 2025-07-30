@@ -1,0 +1,81 @@
+.two-col-content {
+
+	p {
+		margin-bottom: 0;
+	}
+	
+	.caption {
+		font-size: 1.2rem;
+		margin-top: 2rem;
+	}
+
+	.text-content {
+		ul {
+			list-style: disc;
+			
+			line-height: 1.4;
+			font-weight: 300;
+			margin: 0 0 1.5rem 0;
+			padding-left: 1.5rem;
+		}
+	}
+
+	.reversed {
+		.sub-content {
+			order: 3;
+			@extend .mb-md;
+		}
+
+		img {
+			order: 2;
+		}
+
+		.caption {
+			order: 1;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+
+
+		.image, .text {
+			margin-bottom: 8rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.large {
+				padding-left: 0;
+				padding-right: 0;
+
+				.caption {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+		}
+
+		.text-content {
+			margin-top: 4rem;
+		}
+
+		&.mob-rev {
+			.row {
+				flex-direction: column-reverse;
+			}
+
+			.image, .text {
+			
+				&:first-child {
+					margin-bottom: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 8rem;
+				}
+			}
+		}
+
+	}
+}

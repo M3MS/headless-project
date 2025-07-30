@@ -1,0 +1,65 @@
+/* FORMS
+ * ------------------------------------------------ */
+
+input[type="text"],
+input[type="password"],
+input[type="color"],
+input[type="email"],
+input[type="range"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+textarea,
+select {
+	position: relative;
+	display: block;
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $green;
+	border-radius: 0;
+	padding: 0;
+	outline: none;
+	color: $green;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+
+	&:hover,
+	&:focus {
+		border: none;
+		border-bottom: 1px solid $green;
+		color: $green;
+	}
+	&:active {
+		border: none;
+		border-bottom: 1px solid $green;
+	}
+
+	&::placeholder {
+		color: $green;
+	}
+}
+
+label,
+legend {
+	span {
+		font-weight: normal;
+		color: $green;
+	}
+	display: block;
+}
+
+input[type="checkbox"] { display: inline; }
+
+.screen-reader-response {
+	display: none; 
+}
