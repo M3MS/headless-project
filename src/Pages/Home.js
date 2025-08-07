@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql } from '@apollo/client';
 import { Link } from "react-router-dom";
+import PageTransition from '../Components/PageTransition';
 
 const GET_HOME = gql`
 {
@@ -46,7 +47,6 @@ const Home = () => {
   return (
     <div className="front-page container">
         <h1>Home</h1>
-        
     </div>
   );
 };
