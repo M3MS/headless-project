@@ -1,12 +1,12 @@
 //_header.scss
-.site-header {
+.siteHeader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 55px;
   z-index: 999;
-  background-color: $cream;
+  background-color: var(--bs-body-bg);
   transition: all 1s cubic-bezier(.45,.082,0,.90);
 
   &.headroom--unpinned {
@@ -18,7 +18,7 @@
     transform: none;
   }
 
-  .inner {
+  .Inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,22 +26,22 @@
     padding: 0 3.5vw;
   }
 
-  .primary-navigation {
+  .primaryNavigation {
     width: 100%;
     height: 100%;
     transition: all 1s cubic-bezier(.45,.082,0,.90);
 
-    .header-menu{
+    .headerMenu{
       height: 100%;
     }
 
-    #main-menu {
+    #main-nav {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
 
-      .menu-item {
+      .menuItem {
         padding-right: 5rem;
 
         &:last-child() {
@@ -66,7 +66,7 @@
           &::after {
             display: block;
             content: '';
-            background-color: $green;
+            background-color: var(--bs-body-color);
             position: absolute;
             width: 100%;
             height: 1px;
@@ -75,7 +75,6 @@
             transform: scale3d(0, 1, 1);
             transform-origin: center left;
             transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-
           }
 
           &:hover {
@@ -89,7 +88,7 @@
     }
   }
 
-  &.over-on {
+  &.overOn {
     .primary-navigation {
       opacity: 0;
       visibility: hidden;
@@ -113,7 +112,7 @@
 
       span {
           display: block;
-          background: $green;
+          background: var(--bs-body-color);
           width: 25px;
           height: 2px;
           position: relative;
@@ -142,7 +141,7 @@
 
       span{
           display: block;
-          background: $green;
+          background: var(--bs-body-color);
           transition: .25s ease-in-out;
 
         &:nth-child(1){

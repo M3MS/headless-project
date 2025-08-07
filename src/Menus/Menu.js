@@ -45,8 +45,6 @@ const SingleMenu = () => {
   if (!data.teMenu) {
     return <div>Menu not found</div>;
   }
-  
-  console.log(data);
 
   const menu = data.teMenu;
   
@@ -55,30 +53,26 @@ const SingleMenu = () => {
       <div className="container">
           <h1 className="title">{menu.title}</h1>
           <div className="row">
-            <div className="{styles.SideNav} col-md-2 col-10 offset-1">
+            <div className={styles.sideNav + " col-md-2 col-10 offset-1"}>
               // NavMenu
             </div>
-            {menu.menuFlex?.menuSection?.map((section, index) => (
-              <div key={index} className="col-md-6 offset-md-1 col-10 offset-1">
-                <div className="menu-section">
-
-                  <h3 className="lead mb-sm">{section.sectionTitle}</h3>
-
-                  {section.sectionText && <p>{section.sectionText}</p>}
-
+            <div className="col-md-6 offset-md-1 col-10 offset-1">
+              {menu.menuFlex?.menuSection?.map((section, index) => (
+                <div key={index} className={styles.menuSection + " mb-5"}>
+                  <h3 className="h3">{section.sectionTitle}</h3>
+                  {section.sectionText && <p className="lead">{section.sectionText}</p>}
                   {section.foodDrinks.map((foodItem, itemIndex) => (
-                    <div key={itemIndex} className="food-item">
+                    <div key={itemIndex} className={styles.foodItem + " d-flex mb-2"}>
                       <span>{foodItem.description}</span>
                       <span className="price">{foodItem.price}</span>
                     </div>
                   ))}
                   {section.cta && (
-                    <a className="icon-arrow-right mt-sm" href="{section.cta.url}" target="{section.cta.target}">{section.cta.title}</a>
+                    <a className="icon-arrow-right mt-3" href="{section.cta.url}" target="{section.cta.target}">{section.cta.title}</a>
                   )}
                 </div>
-              </div>
-            ))}
-            
+              ))}
+            </div>
           </div>
       </div>
     </div>

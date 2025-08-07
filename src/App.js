@@ -6,6 +6,7 @@ import './App.scss';
 import Home from './Pages/Home';
 import Menus from './Menus/Menus';
 import SingleMenu from './Menus/Menu';
+import Header from './Components/Header'
 
 const client = new ApolloClient({
   uri: 'https://blocklabs.test/graphql',
@@ -16,8 +17,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
+      <Header />
       <div className="content">
-        <h1 className='h1'>28 Market Place</h1>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/menus" element={<Menus />} />
