@@ -96,3 +96,27 @@ $border-radius-lg: 1rem;
 $link-color: $green;
 $link-hover-color: $green;
 $link-decoration: none;
+
+// Global CSS Custom Properties - available in all CSS modules
+:root {
+  --color-green: #{$green};
+  --color-cream: #{$cream};
+  --color-accent: #{$accent};
+  --color-body-bg: #{$body-bg};
+  --color-body: #{$body-color};
+  --color-link: #{$link-color};
+  --color-link-hover: #{$link-hover-color};
+  --color-border: #{$border-color};
+  
+  --font-family: #{$font-family-sans-serif};
+  --font-size-base: #{$font-size-base};
+  --font-size-h1: #{$h1-font-size};
+  --font-size-h2: #{$h2-font-size};
+  --font-size-h3: #{$h3-font-size};
+  --font-size-h4: #{$h4-font-size};
+  --font-size-h5: #{$h5-font-size};
+  --font-size-h6: #{$h6-font-size};
+  
+  --grid-gutter: #{$grid-gutter-width};
+  --border-radius-lg: #{$border-radius-lg};
+}

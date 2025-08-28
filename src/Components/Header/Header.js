@@ -17,7 +17,6 @@ const GET_MAIN_NAV = gql`
           path
           target
           title
-          parentId
           order
           childItems {
             nodes {
@@ -51,31 +50,31 @@ const Header = () => {
     const nav = data.menu;
     
     return (
-    <header className={styles.siteHeader + " fade-1"} id="header" >
-        <div className={styles.Inner}>
-            <nav className={styles.primaryNavigation}>
-                <div className={styles.headerNav}>
-                    <ul id="main-nav">
-                        {nav.menuItems.nodes.map((item, index) => (
-                            <li key={index} className={styles.menuItem}>
-                                <Link to={item.url}>{item.label}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </nav>
-            <div id="nav-toggle">
-                <div id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div id="cross">
-                    <span></span>
-                    <span></span>
-                </div>
+    <header className={styles.siteHeader} id="header" >
+      <div className={styles.Inner}>
+        <nav className={styles.primaryNavigation}>
+          <div className={styles.headerMenu}>
+              <ul className={styles.mainNav + " list-unstyled"}>
+                  {nav.menuItems.nodes.map((item, index) => (
+                    <li key={index} className={styles.menuItem}>
+                        <Link to={item.path}>{item.label}</Link>
+                    </li>
+                  ))}
+              </ul>
+          </div>
+        </nav>
+        <div className={styles.menuToggle}>
+            <div className={styles.hamburger}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div className={styles.cross}>
+              <span></span>
+              <span></span>
             </div>
         </div>
+      </div>
     </header>
     );
   };

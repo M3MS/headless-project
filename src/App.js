@@ -6,7 +6,7 @@ import './App.scss';
 import Home from './Pages/Home';
 import Menus from './Menus/Menus';
 import SingleMenu from './Menus/Menu';
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 
 const client = new ApolloClient({
   uri: 'https://blocklabs.test/graphql',

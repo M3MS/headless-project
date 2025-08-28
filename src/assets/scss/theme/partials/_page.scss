@@ -25,11 +25,6 @@ img {
     padding-right: 0 !important;
 }
 
-.fade-1, .fade-2, .fade-3 {
-	opacity: 0;
-	visibility: hidden;
-}
-
 .rellax {
   transition: .45s cubic-bezier(0.235, 0.615, 0.185, 0.995);
 }
@@ -63,7 +58,7 @@ img {
 	z-index: 2;
 }
 
-.content-area {
+.content {
 	margin-top: 5.5rem;
 	padding-bottom: 1rem;
 	background-color: $cream;
@@ -91,4 +86,3 @@ img {
 		text-decoration: underline;
 	}
 }
-

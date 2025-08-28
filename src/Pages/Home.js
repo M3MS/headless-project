@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql } from '@apollo/client';
 import { Link } from "react-router-dom";
 import PageTransition from '../Components/PageTransition';
+import FlexibleContent from '../Components/FlexibleContent';
 
 const GET_HOME = gql`
 {
@@ -21,7 +22,7 @@ const GET_HOME = gql`
           }
         }
         __typename
-        ... on ModuleLargeText_Fields {
+        ... on TheFlexMasterFlexLargeTextLayout {
           text
           mainTitle
           cta {
@@ -42,12 +43,12 @@ const Home = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   
-  console.log(data);
-  
   return (
-    <div className="front-page container">
-        <h1>Home</h1>
-    </div>
+    <PageTransition>
+      <div className="front-page">
+        <FlexibleContent flexibleContent={data.page?.theFlex} />
+      </div>
+    </PageTransition>
   );
 };
 
